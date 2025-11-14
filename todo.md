@@ -31,5 +31,11 @@
 - [x] Criar arquivo vercel.json para configurar build estático correto
 - [x] Remover/ajustar arquivos de servidor desnecessários
 - [x] Testar correção localmente
+- [x] Fazer push para GitHub
+- [x] Verificar deploy no Vercel (aguardando re-deploy do usuário)
+
+## Correção Adicional - Cache do Vercel
+
+- [x] Criar arquivo .vercelignore
 - [ ] Fazer push para GitHub
-- [ ] Verificar deploy no Vercel
+- [ ] Instruir usuário a limpar cache do Vercel
