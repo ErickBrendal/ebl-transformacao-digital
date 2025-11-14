@@ -37,5 +37,19 @@
 ## Correção Adicional - Cache do Vercel
 
 - [x] Criar arquivo .vercelignore
+- [x] Fazer push para GitHub
+- [x] Instruir usuário a limpar cache do Vercel
+
+## Push Forçado para GitHub
+
+- [x] Fazer push dos commits corretos (9b03d6e e f8352b9e) para o GitHub
+- [x] Verificar se o package.json no GitHub está correto
+- [x] Instruir usuário a fazer re-deploy no Vercel
+
+## Atualização de Título e Favicon
+
+- [x] Criar favicon a partir do logo da EBL
+- [x] Atualizar index.html com título "EBL Soluções Corporativas | Transformação Digital"
+- [x] Adicionar favicon ao projeto
+- [x] Testar no navegador
 - [ ] Fazer push para GitHub
-- [ ] Instruir usuário a limpar cache do Vercel
