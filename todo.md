@@ -24,4 +24,12 @@
 - [x] Atualizar WhatsApp para (11) 97445-5563 e (11) 98484-3866
 - [x] Atualizar e-mail para erick.almeida@eblsolucoescorp.tec.br em todos os lugares
 - [x] Testar alterações localmente
-- [ ] Fazer push das alterações para o GitHub
+- [x] Fazer push das alterações para o GitHub
+
+## Correção de Erro de Deploy no Vercel
+
+- [x] Criar arquivo vercel.json para configurar build estático correto
+- [x] Remover/ajustar arquivos de servidor desnecessários
+- [x] Testar correção localmente
+- [ ] Fazer push para GitHub
+- [ ] Verificar deploy no Vercel
