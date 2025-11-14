@@ -284,9 +284,9 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-2">Básico</h3>
                   <p className="text-muted-foreground">Início da Presença Digital</p>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary">R$ 2.000</div>
-                  <div className="text-sm text-muted-foreground">Uma única vez</div>
+                <div className="space-y-2">
+                  <div className="text-lg font-semibold text-primary">Investimento Personalizado</div>
+                  <p className="text-sm text-muted-foreground">Valor definido após diagnóstico do seu negócio</p>
                 </div>
                 <ul className="space-y-3">
                   {[
@@ -306,7 +306,7 @@ export default function Home() {
                   className="w-full"
                   onClick={scrollToContact}
                 >
-                  Contate-nos
+                  Solicitar Diagnóstico Gratuito
                 </Button>
               </CardContent>
             </Card>
@@ -323,9 +323,9 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-2">Completo</h3>
                   <p className="text-muted-foreground">Automação e Crescimento</p>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-accent">R$ 3.500</div>
-                  <div className="text-sm text-muted-foreground">Uma única vez</div>
+                <div className="space-y-2">
+                  <div className="text-lg font-semibold text-accent">Investimento Personalizado</div>
+                  <p className="text-sm text-muted-foreground">Valor definido após diagnóstico do seu negócio</p>
                 </div>
                 <ul className="space-y-3">
                   {[
@@ -344,7 +344,7 @@ export default function Home() {
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                   onClick={scrollToContact}
                 >
-                  QUERO O COMPLETO
+                  SOLICITAR DIAGNÓSTICO GRATUITO
                 </Button>
               </CardContent>
             </Card>
@@ -356,9 +356,9 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-2">Premium</h3>
                   <p className="text-muted-foreground">Máximo Impacto e IA Estratégica</p>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary">R$ 5.500</div>
-                  <div className="text-sm text-muted-foreground">Uma única vez</div>
+                <div className="space-y-2">
+                  <div className="text-lg font-semibold text-primary">Investimento Personalizado</div>
+                  <p className="text-sm text-muted-foreground">Valor definido após diagnóstico do seu negócio</p>
                 </div>
                 <ul className="space-y-3">
                   {[
@@ -378,7 +378,7 @@ export default function Home() {
                   className="w-full"
                   onClick={scrollToContact}
                 >
-                  QUERO O PREMIUM
+                  Solicitar Diagnóstico Gratuito
                 </Button>
               </CardContent>
             </Card>
@@ -472,16 +472,29 @@ export default function Home() {
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 group"
-                asChild
-              >
-                <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer">
-                  FALE COM O ESPECIALISTA AGORA
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 group"
+                  asChild
+                >
+                  <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer">
+                    WHATSAPP: (11) 97445-5563
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="text-lg px-8 py-6 group"
+                  asChild
+                >
+                  <a href="https://wa.me/5511984843866" target="_blank" rel="noopener noreferrer">
+                    WHATSAPP: (11) 98484-3866
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+              </div>
             </div>
             
             <div className="pt-8 space-y-4">
@@ -489,6 +502,15 @@ export default function Home() {
                 <Mail className="w-5 h-5" />
                 <a href="mailto:erick.almeida@eblsolucoescorp.tec.br" className="hover:text-accent transition-colors">
                   erick.almeida@eblsolucoescorp.tec.br
+                </a>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-muted-foreground">
+                <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  WhatsApp: (11) 97445-5563
+                </a>
+                <span className="hidden sm:inline">|</span>
+                <a href="https://wa.me/5511984843866" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  WhatsApp: (11) 98484-3866
                 </a>
               </div>
               <div className="flex items-center justify-center gap-2 text-muted-foreground">
