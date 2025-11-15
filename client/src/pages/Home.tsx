@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { trackWhatsAppClick, trackEmailClick, trackCTAClick } from "@/lib/analytics";
 import { 
   ArrowRight, 
   TrendingDown, 
@@ -38,7 +39,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
-            <div className="space-y-8 animate-fade-in-up">
+            <div className="space-y-8 animate-fade-in-up" data-aos="fade-right">
               <Badge className="bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold">
                 <Sparkles className="w-4 h-4 mr-2 inline" />
                 Especialista em Transformação Digital
@@ -84,7 +85,7 @@ export default function Home() {
             </div>
             
             {/* Right side - Animated photo */}
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
               <div className="relative group">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse" />
@@ -121,7 +122,7 @@ export default function Home() {
       {/* O Problema Section */}
       <section className="py-12 sm:py-16 md:py-24 bg-card/50">
         <div className="container">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4" data-aos="fade-up">
             <Badge className="bg-destructive/20 text-destructive px-4 py-2">
               <TrendingDown className="w-4 h-4 mr-2 inline" />
               A Realidade do Mercado
@@ -163,6 +164,8 @@ export default function Home() {
               <Card 
                 key={index} 
                 className="bg-card border-destructive/20 hover:border-destructive/50 transition-all duration-300 hover:scale-105 group"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="w-14 h-14 rounded-lg bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
@@ -180,7 +183,7 @@ export default function Home() {
       {/* Soluções Section */}
       <section className="py-12 sm:py-16 md:py-24">
         <div className="container">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4" data-aos="fade-up">
             <Badge className="bg-primary/20 text-primary px-4 py-2">
               <Rocket className="w-4 h-4 mr-2 inline" />
               A Arquitetura do Sucesso
@@ -244,6 +247,8 @@ export default function Home() {
               <Card 
                 key={index} 
                 className="bg-card border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 group"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -262,7 +267,7 @@ export default function Home() {
       {/* Planos Section */}
       <section className="py-12 sm:py-16 md:py-24 bg-card/50">
         <div className="container">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4" data-aos="fade-up">
             <Badge className="bg-accent/20 text-accent px-4 py-2">
               <DollarSign className="w-4 h-4 mr-2 inline" />
               O Caminho para a Escala
@@ -278,7 +283,7 @@ export default function Home() {
           
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {/* Básico */}
-            <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300">
+            <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
               <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Básico</h3>
@@ -312,7 +317,7 @@ export default function Home() {
             </Card>
 
             {/* Completo (Destaque) */}
-            <Card className="bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-accent shadow-xl shadow-accent/20 sm:scale-105 relative">
+            <Card className="bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-accent shadow-xl shadow-accent/20 sm:scale-105 relative" data-aos="fade-up" data-aos-delay="100">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <Badge className="bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold">
                   MAIS PROCURADO
@@ -350,7 +355,7 @@ export default function Home() {
             </Card>
 
             {/* Premium */}
-            <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300">
+            <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
               <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Premium</h3>
@@ -389,7 +394,7 @@ export default function Home() {
       {/* Metodologia Section */}
       <section className="py-12 sm:py-16 md:py-24">
         <div className="container">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4" data-aos="fade-up">
             <Badge className="bg-primary/20 text-primary px-4 py-2">
               <Target className="w-4 h-4 mr-2 inline" />
               Autoridade Comprovada
@@ -478,7 +483,12 @@ export default function Home() {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
                   asChild
                 >
-                  <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href="https://wa.me/5511974455563" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('5511974455563')}
+                  >
                     WHATSAPP: (11) 97445-5563
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -489,7 +499,12 @@ export default function Home() {
                   className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
                   asChild
                 >
-                  <a href="https://wa.me/5511984843866" target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href="https://wa.me/5511984843866" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('5511984843866')}
+                  >
                     WHATSAPP: (11) 98484-3866
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -500,16 +515,32 @@ export default function Home() {
             <div className="pt-8 space-y-4">
               <div className="flex items-center justify-center gap-2 text-muted-foreground">
                 <Mail className="w-5 h-5" />
-                <a href="mailto:erick.almeida@eblsolucoescorp.tec.br" className="hover:text-accent transition-colors">
+                <a 
+                  href="mailto:erick.almeida@eblsolucoescorp.tec.br" 
+                  className="hover:text-accent transition-colors"
+                  onClick={() => trackEmailClick('erick.almeida@eblsolucoescorp.tec.br')}
+                >
                   erick.almeida@eblsolucoescorp.tec.br
                 </a>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-muted-foreground">
-                <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <a 
+                  href="https://wa.me/5511974455563" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-accent transition-colors"
+                  onClick={() => trackWhatsAppClick('5511974455563')}
+                >
                   WhatsApp: (11) 97445-5563
                 </a>
                 <span className="hidden sm:inline">|</span>
-                <a href="https://wa.me/5511984843866" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <a 
+                  href="https://wa.me/5511984843866" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-accent transition-colors"
+                  onClick={() => trackWhatsAppClick('5511984843866')}
+                >
                   WhatsApp: (11) 98484-3866
                 </a>
               </div>

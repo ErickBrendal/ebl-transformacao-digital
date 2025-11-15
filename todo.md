@@ -61,4 +61,24 @@
 - [x] Otimizar seção de planos para mobile
 - [x] Ajustar tipografia e espaçamentos para mobile
 - [x] Testar em diferentes resoluções (mobile, tablet, desktop)
+- [x] Fazer push para GitHub
+
+## Implementação de Animações e Rastreamento
+
+### Animações de Scroll (AOS)
+- [x] Instalar biblioteca de animações AOS
+- [x] Configurar AOS no projeto
+- [x] Adicionar animações em todas as seções
+- [x] Testar animações em diferentes dispositivos
+
+### Google Tag Manager e Meta Pixel
+- [x] Configurar Google Tag Manager no site
+- [x] Adicionar Meta Pixel (Facebook) via GTM
+- [x] Configurar eventos de conversão (cliques em WhatsApp)
+- [x] Configurar eventos de conversão (cliques em e-mail)
+- [x] Testar rastreamento de eventos
+
+### Finalização
+- [x] Testar tudo localmente
+- [ ] Salvar checkpoint
 - [ ] Fazer push para GitHub
