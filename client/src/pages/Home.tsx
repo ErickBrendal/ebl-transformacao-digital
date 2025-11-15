@@ -44,14 +44,14 @@ export default function Home() {
                 Especialista em Transformação Digital
               </Badge>
               
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                 TRANSFORMAÇÃO DIGITAL COMPLETA:
-                <span className="block mt-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <span className="block mt-2 sm:mt-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   O FIM DA PERDA DE OPORTUNIDADES.
                 </span>
               </h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Especialista em Estratégia e Tecnologia, <span className="text-accent font-semibold">Erick Almeida</span> projeta e implementa a infraestrutura digital que seu negócio precisa para dominar o mercado <span className="text-primary font-semibold">24 horas por dia, 7 dias por semana.</span>
               </p>
               
@@ -67,18 +67,18 @@ export default function Home() {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 pt-8 border-t border-border">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-6 sm:pt-8 border-t border-border">
                 <div>
-                  <div className="text-3xl font-bold text-primary">R$ 2.000+</div>
-                  <div className="text-sm text-muted-foreground">Economizados/mês</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">R$ 2.000+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Economizados/mês</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-accent">24/7</div>
-                  <div className="text-sm text-muted-foreground">Operação contínua</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-accent">24/7</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Operação contínua</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">Digital</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">100%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Digital</div>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse" />
                 
                 {/* Photo container with golden border */}
-                <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/50 group-hover:scale-105 group-hover:shadow-accent/70 transition-all duration-500">
+                <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/50 group-hover:scale-105 group-hover:shadow-accent/70 transition-all duration-500">
                   <img 
                     src="/assets/erick_almeida_foto.jpg" 
                     alt="Erick Almeida - Especialista em Transformação Digital"
@@ -119,21 +119,21 @@ export default function Home() {
       </section>
 
       {/* O Problema Section */}
-      <section className="py-24 bg-card/50">
+      <section className="py-12 sm:py-16 md:py-24 bg-card/50">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <Badge className="bg-destructive/20 text-destructive px-4 py-2">
               <TrendingDown className="w-4 h-4 mr-2 inline" />
               A Realidade do Mercado
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               SEU NEGÓCIO ESTÁ DEIXANDO MAIS DE{" "}
               <span className="text-destructive">R$ 2.000 POR MÊS</span>{" "}
               NA MESA.
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 icon: Users,
@@ -164,12 +164,12 @@ export default function Home() {
                 key={index} 
                 className="bg-card border-destructive/20 hover:border-destructive/50 transition-all duration-300 hover:scale-105 group"
               >
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="w-14 h-14 rounded-lg bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
                     <problem.icon className={`w-7 h-7 ${problem.color}`} />
                   </div>
-                  <h3 className="text-xl font-bold">{problem.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold">{problem.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{problem.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -178,25 +178,25 @@ export default function Home() {
       </section>
 
       {/* Soluções Section */}
-      <section className="py-24">
+      <section className="py-12 sm:py-16 md:py-24">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <Badge className="bg-primary/20 text-primary px-4 py-2">
               <Rocket className="w-4 h-4 mr-2 inline" />
               A Arquitetura do Sucesso
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               A INFRAESTRUTURA COMPLETA PARA{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 ESCALAR SEU NEGÓCIO.
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Nós não entregamos apenas ferramentas; implementamos uma arquitetura digital robusta e inteligente, desenhada para máxima performance e autoridade no mercado.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 icon: Globe,
@@ -245,7 +245,7 @@ export default function Home() {
                 key={index} 
                 className="bg-card border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 group"
               >
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <solution.icon className="w-7 h-7 text-primary" />
                   </div>
@@ -260,14 +260,14 @@ export default function Home() {
       </section>
 
       {/* Planos Section */}
-      <section className="py-24 bg-card/50">
+      <section className="py-12 sm:py-16 md:py-24 bg-card/50">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <Badge className="bg-accent/20 text-accent px-4 py-2">
               <DollarSign className="w-4 h-4 mr-2 inline" />
               O Caminho para a Escala
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               ESCOLHA O NÍVEL DE{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 DOMÍNIO DIGITAL
@@ -276,12 +276,12 @@ export default function Home() {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {/* Básico */}
             <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300">
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Básico</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Básico</h3>
                   <p className="text-muted-foreground">Início da Presença Digital</p>
                 </div>
                 <div className="space-y-2">
@@ -312,15 +312,15 @@ export default function Home() {
             </Card>
 
             {/* Completo (Destaque) */}
-            <Card className="bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-accent shadow-xl shadow-accent/20 scale-105 relative">
+            <Card className="bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-accent shadow-xl shadow-accent/20 sm:scale-105 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <Badge className="bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold">
                   MAIS PROCURADO
                 </Badge>
               </div>
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Completo</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Completo</h3>
                   <p className="text-muted-foreground">Automação e Crescimento</p>
                 </div>
                 <div className="space-y-2">
@@ -351,9 +351,9 @@ export default function Home() {
 
             {/* Premium */}
             <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300">
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Premium</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Premium</h3>
                   <p className="text-muted-foreground">Máximo Impacto e IA Estratégica</p>
                 </div>
                 <div className="space-y-2">
@@ -387,14 +387,14 @@ export default function Home() {
       </section>
 
       {/* Metodologia Section */}
-      <section className="py-24">
+      <section className="py-12 sm:py-16 md:py-24">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <Badge className="bg-primary/20 text-primary px-4 py-2">
               <Target className="w-4 h-4 mr-2 inline" />
               Autoridade Comprovada
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               RESULTADOS REAIS.{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 METODOLOGIA COMPROVADA.
@@ -429,7 +429,7 @@ export default function Home() {
                 key={index} 
                 className="bg-card border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105"
               >
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="text-5xl font-bold text-accent opacity-50">{item.step}</div>
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
@@ -441,18 +441,18 @@ export default function Home() {
       </section>
 
       {/* Por que agora Section */}
-      <section className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             <Badge className="bg-destructive/20 text-destructive px-4 py-2">
               <Clock className="w-4 h-4 mr-2 inline" />
               Urgência
             </Badge>
-            <h2 className="text-4xl lg:text-6xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               CADA DIA DE ATRASO É UM DIA DE{" "}
               <span className="text-destructive">LUCRO PERDIDO.</span>
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               A Transformação Digital não é mais um diferencial, é a fundação para a sobrevivência e escala no mercado moderno. Não espere a concorrência dominar seu espaço. Sua transformação começa com um clique.
             </p>
           </div>
@@ -462,8 +462,8 @@ export default function Home() {
       {/* CTA Final Section */}
       <section id="contact" className="py-24 bg-card/50">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl lg:text-6xl font-bold">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 TRANSFORME SUA EMPRESA
               </span>
@@ -475,7 +475,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 group"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
                   asChild
                 >
                   <a href="https://wa.me/5511974455563" target="_blank" rel="noopener noreferrer">
@@ -486,7 +486,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="text-lg px-8 py-6 group"
+                  className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
                   asChild
                 >
                   <a href="https://wa.me/5511984843866" target="_blank" rel="noopener noreferrer">

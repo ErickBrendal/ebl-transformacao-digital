@@ -52,4 +52,13 @@
 - [x] Atualizar index.html com título "EBL Soluções Corporativas | Transformação Digital"
 - [x] Adicionar favicon ao projeto
 - [x] Testar no navegador
+- [x] Fazer push para GitHub
+
+## Otimização de Responsividade Mobile
+
+- [x] Otimizar Hero Section para mobile (foto, títulos, botões)
+- [x] Otimizar seções de conteúdo e cards para mobile
+- [x] Otimizar seção de planos para mobile
+- [x] Ajustar tipografia e espaçamentos para mobile
+- [x] Testar em diferentes resoluções (mobile, tablet, desktop)
 - [ ] Fazer push para GitHub
