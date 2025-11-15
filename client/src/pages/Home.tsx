@@ -85,13 +85,13 @@ export default function Home() {
             </div>
             
             {/* Right side - Animated photo */}
-            <div className="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
+            <div className="relative flex items-center justify-center pb-8 sm:pb-0" data-aos="fade-left" data-aos-delay="200">
               <div className="relative group">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse" />
                 
                 {/* Photo container with golden border */}
-                <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/50 group-hover:scale-105 group-hover:shadow-accent/70 transition-all duration-500">
+                <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/50 group-hover:scale-105 group-hover:shadow-accent/70 transition-all duration-500">
                   <img 
                     src="/assets/erick_almeida_foto.jpg" 
                     alt="Erick Almeida - Especialista em Transformação Digital"

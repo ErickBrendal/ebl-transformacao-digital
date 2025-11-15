@@ -80,5 +80,13 @@
 
 ### Finalização
 - [x] Testar tudo localmente
+- [x] Salvar checkpoint
+- [x] Fazer push para GitHub
+
+## Correção de Imagem Cortada no Mobile
+
+- [x] Ajustar tamanho da foto para mobile (280px em vez de 250px)
+- [x] Ajustar espaçamento inferior para não cortar badge (pb-8)
+- [x] Testar em diferentes resoluções mobile
 - [ ] Salvar checkpoint
 - [ ] Fazer push para GitHub
