@@ -47,7 +47,7 @@ Este documento contém o passo a passo completo para configurar o rastreamento d
 ### Passo 2.2: Configurar o Business Manager
 1. **Nome da empresa**: `EBL Soluções Corporativas`
 2. **Seu nome**: Erick Almeida
-3. **E-mail comercial**: erick.almeida@eblsolucoescorp.tec.br
+3. **E-mail comercial**: admebl@eblsolucoescorporativas.com
 4. Clique em **"Avançar"** e complete o cadastro
 
 ### Passo 2.3: Criar o Meta Pixel
@@ -251,7 +251,7 @@ Se tiver dúvidas ou problemas na configuração:
 
 1. **Google Tag Manager**: https://support.google.com/tagmanager
 2. **Meta Pixel**: https://www.facebook.com/business/help/952192354843755
-3. **Contato**: erick.almeida@eblsolucoescorp.tec.br
+3. **Contato**: admebl@eblsolucoescorporativas.com
 
 ---
 

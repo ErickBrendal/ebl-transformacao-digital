@@ -86,7 +86,7 @@ Com:
 - ✅ Seção "Soluções" com cards animados
 - ✅ Seção "Planos" com CTAs "Solicitar Diagnóstico Gratuito"
 - ✅ Contatos atualizados: WhatsApp (11) 97445-5563 e (11) 98484-3866
-- ✅ E-mail: erick.almeida@eblsolucoescorp.tec.br
+- ✅ E-mail: admebl@eblsolucoescorporativas.com
 - ✅ Responsivo para mobile e desktop
 - ✅ SSL/HTTPS ativo
 

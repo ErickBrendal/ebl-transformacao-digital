@@ -22,7 +22,7 @@
 - [x] Remover preços dos planos da seção de Planos
 - [x] Adicionar CTAs "Consulte-me para um diagnóstico personalizado" nos planos
 - [x] Atualizar WhatsApp para (11) 97445-5563 e (11) 98484-3866
-- [x] Atualizar e-mail para erick.almeida@eblsolucoescorp.tec.br em todos os lugares
+- [x] Atualizar e-mail para admebl@eblsolucoescorporativas.com em todos os lugares
 - [x] Testar alterações localmente
 - [x] Fazer push das alterações para o GitHub
 
