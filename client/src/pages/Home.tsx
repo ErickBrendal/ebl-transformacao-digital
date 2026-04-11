@@ -29,7 +29,12 @@ import {
   Calendar,
   ChevronRight,
   Menu,
-  X
+  X,
+  Linkedin,
+  Instagram,
+  Code2,
+  BrainCircuit,
+  Network
 } from "lucide-react";
 
 function useIntersectionObserver(threshold = 0.1) {
@@ -167,6 +172,7 @@ export default function Home() {
             <span className="font-bold text-sm sm:text-base hidden sm:block text-white/90">EBL Soluções Corporativas</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm">
+            <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors font-medium">Sobre</button>
             <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors font-medium">Serviços</button>
             <button onClick={() => scrollToSection('plans')} className="text-gray-400 hover:text-white transition-colors font-medium">Planos</button>
             <button onClick={() => scrollToSection('process')} className="text-gray-400 hover:text-white transition-colors font-medium">Processo</button>
@@ -184,6 +190,7 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col gap-3"
             style={{ background: 'rgba(8, 8, 20, 0.98)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
           >
+            <button onClick={() => scrollToSection('about')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Sobre</button>
             <button onClick={() => scrollToSection('services')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Serviços</button>
             <button onClick={() => scrollToSection('plans')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Planos</button>
             <button onClick={() => scrollToSection('process')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Processo</button>
@@ -495,6 +502,300 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* SOBRE MIM */}
+      <section id="about" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 10% 50%, rgba(20, 184, 166, 0.08) 0%, transparent 55%), radial-gradient(ellipse at 90% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 50%)' }} />
+        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.015) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+
+        <div className="container relative z-10">
+
+          {/* Header */}
+          <div className="text-center mb-16 md:mb-20 space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
+              style={{ background: 'rgba(20, 184, 166, 0.12)', border: '1px solid rgba(20, 184, 166, 0.3)', color: '#2dd4bf' }}>
+              <Users className="w-4 h-4" />
+              O Especialista Por Trás da Transformação
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black">
+              14 ANOS TRANSFORMANDO{" "}
+              <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                DADOS EM CRESCIMENTO.
+              </span>
+            </h2>
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+              Conheça a trajetória real de quem vai levar seu negócio ao próximo nível.
+            </p>
+          </div>
+
+          {/* Main content grid */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
+
+            {/* Coluna da foto + badges */}
+            <div className="relative flex justify-center lg:justify-end lg:sticky lg:top-24">
+              <div className="relative w-72 sm:w-80 md:w-96 lg:w-[400px]">
+                {/* Glow de fundo */}
+                <div className="absolute -inset-6 rounded-3xl opacity-25 animate-glow-pulse pointer-events-none"
+                  style={{ background: 'linear-gradient(135deg, #14b8a6, #f59e0b)', filter: 'blur(20px)' }} />
+
+                {/* Foto principal */}
+                <div className="relative rounded-3xl overflow-hidden"
+                  style={{ border: '2px solid rgba(20, 184, 166, 0.3)', boxShadow: '0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05) inset' }}>
+                  <img
+                    src="/assets/erick_almeida_foto.jpg"
+                    alt="Erick Almeida — Líder de Plataforma Salesforce & Transformação Digital"
+                    className="w-full object-cover"
+                    style={{ aspectRatio: '3/4', objectPosition: 'center top', filter: 'brightness(1.05) contrast(1.08) saturate(1.05)' }}
+                  />
+                  {/* Overlay base */}
+                  <div className="absolute bottom-0 left-0 right-0 h-40"
+                    style={{ background: 'linear-gradient(to top, rgba(5,5,15,0.85) 0%, transparent 100%)' }} />
+                  {/* Info sobre a foto */}
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <div className="text-xl font-black text-white">Erick Almeida</div>
+                    <div className="text-sm font-semibold" style={{ color: '#2dd4bf' }}>Líder Salesforce & Transformação Digital</div>
+                    <div className="text-xs text-gray-400 mt-1">Guarulhos, São Paulo · Fundador da EBL Soluções</div>
+                  </div>
+                </div>
+
+                {/* Badge — Experiência */}
+                <div className="absolute -top-4 -right-4 sm:-right-6 px-4 py-3 rounded-2xl animate-float"
+                  style={{ background: 'rgba(5,5,15,0.97)', border: '1px solid rgba(245,158,11,0.5)', boxShadow: '0 8px 32px rgba(245,158,11,0.25)' }}>
+                  <div className="text-2xl font-black text-amber-400">14+</div>
+                  <div className="text-xs text-gray-400 font-medium leading-tight">Anos de<br/>experiência</div>
+                </div>
+
+                {/* Badge — Empresas */}
+                <div className="absolute -bottom-4 -left-4 sm:-left-6 px-4 py-3 rounded-2xl animate-float"
+                  style={{ animationDelay: '0.4s', background: 'rgba(5,5,15,0.97)', border: '1px solid rgba(20,184,166,0.5)', boxShadow: '0 8px 32px rgba(20,184,166,0.25)' }}>
+                  <div className="text-2xl font-black text-teal-400">500+</div>
+                  <div className="text-xs text-gray-400 font-medium leading-tight">Conexões<br/>LinkedIn</div>
+                </div>
+
+                {/* Badge — Certificações */}
+                <div className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 px-4 py-3 rounded-2xl animate-float"
+                  style={{ animationDelay: '0.8s', background: 'rgba(5,5,15,0.97)', border: '1px solid rgba(168,85,247,0.5)', boxShadow: '0 8px 32px rgba(168,85,247,0.2)' }}>
+                  <div className="text-2xl font-black" style={{ color: '#a855f7' }}>6+</div>
+                  <div className="text-xs text-gray-400 font-medium leading-tight">Certificações<br/>oficiais</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Coluna de conteúdo */}
+            <div className="space-y-8">
+
+              {/* Citação de impacto */}
+              <blockquote className="relative pl-6 border-l-4" style={{ borderColor: '#14b8a6' }}>
+                <p className="text-xl sm:text-2xl font-bold text-white leading-relaxed italic">
+                  "Transformar dados em crescimento não é teoria — é o que eu faço há 14 anos em empresas como ELGIN, Saint-Gobain e Assaí Atacadista."
+                </p>
+                <cite className="block mt-3 text-sm font-semibold not-italic" style={{ color: '#2dd4bf' }}>— Erick Almeida, Fundador da EBL Soluções Corporativas</cite>
+              </blockquote>
+
+              {/* Bio real */}
+              <div className="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                  Erick Almeida é <span className="text-white font-semibold">Analista Sênior de CRM e Líder de Plataforma Salesforce</span> com mais de <span className="text-teal-400 font-semibold">14 anos de experiência</span> em transformação digital, inteligência de dados e automação de processos. Formado em Administração pela <span className="text-white font-semibold">Anhanguera</span>, com pós-graduação em Engenharia de Software pela <span className="text-white font-semibold">Descomplica</span> e especialização em Mercado Financeiro pela <span className="text-white font-semibold">FEBRABAN</span>.
+                </p>
+                <p>
+                  Ao longo da carreira, liderou projetos de alto impacto na <span className="text-amber-400 font-semibold">ELGIN S.A.</span>, <span className="text-amber-400 font-semibold">Saint-Gobain Brasil</span> e <span className="text-amber-400 font-semibold">Assaí Atacadista</span> — entregando resultados como <span className="text-teal-400 font-semibold">+20% de NPS</span>, <span className="text-teal-400 font-semibold">+17% de crescimento na base de clientes em 2 meses</span> e <span className="text-teal-400 font-semibold">-30% no tempo de processamento de dados</span>.
+                </p>
+                <p>
+                  Fundador da <span className="text-white font-semibold">EBL Soluções Corporativas</span>, Erick aplica toda essa expertise corporativa para ajudar pequenas e médias empresas a dominarem o mercado digital — com automação, CRM, presença online e estratégias orientadas por dados.
+                </p>
+              </div>
+
+              {/* Stack de competências reais */}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Salesforce CRM", sub: "Sales & Service Cloud · Apex · LWC", color: "#14b8a6", icon: "⚡" },
+                  { label: "BI & Dados", sub: "Power BI · Tableau · SQL · ETL", color: "#f59e0b", icon: "📊" },
+                  { label: "Automação", sub: "RPA · Flows · Integrações API", color: "#0ea5e9", icon: "🤖" },
+                  { label: "Marketing Digital", sub: "Marketing Cloud · Google · Meta", color: "#a855f7", icon: "🚀" },
+                ].map((skill, i) => (
+                  <div key={i} className="rounded-xl p-4 space-y-1 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${skill.color}22` }}>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{skill.icon}</span>
+                      <div className="text-sm font-bold text-white">{skill.label}</div>
+                    </div>
+                    <div className="text-xs text-gray-500 leading-relaxed">{skill.sub}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Certificações reais */}
+              <div className="rounded-2xl p-5 space-y-4"
+                style={{ background: 'rgba(20,184,166,0.04)', border: '1px solid rgba(20,184,166,0.15)' }}>
+                <div className="flex items-center gap-2">
+                  <Award className="w-4 h-4 text-teal-400" />
+                  <div className="text-xs font-bold text-teal-400 uppercase tracking-widest">Certificações & Formação Oficial</div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {[
+                    { cert: "Salesforce Certified Administrator", org: "Salesforce", color: "#14b8a6" },
+                    { cert: "Marketing Cloud Expert", org: "Enext / VML Company", color: "#0ea5e9" },
+                    { cert: "Especialista em Salesforce", org: "Sottelli / Capgemini", color: "#a855f7" },
+                    { cert: "Cybersecurity", org: "FIAP", color: "#ef4444" },
+                    { cert: "Google Workspace & Gemini IA", org: "Google", color: "#f59e0b" },
+                    { cert: "Double Star Ranger", org: "Trailhead by Salesforce", color: "#14b8a6" },
+                    { cert: "Pós-graduação Eng. de Software", org: "Descomplica Faculdade Digital", color: "#a855f7" },
+                    { cert: "Mercado Financeiro", org: "FEBRABAN", color: "#f59e0b" },
+                  ].map((c, i) => (
+                    <div key={i} className="flex items-start gap-2 py-1">
+                      <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: c.color }} />
+                      <div>
+                        <div className="text-xs font-semibold text-white leading-tight">{c.cert}</div>
+                        <div className="text-xs text-gray-500">{c.org}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Empresas onde atuou */}
+              <div className="space-y-3">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">Experiência em Grandes Empresas</div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {[
+                    { name: "ELGIN S.A.", role: "Analista CRM Sênior", period: "2024–atual", color: "#14b8a6" },
+                    { name: "Saint-Gobain", role: "Dev. Sistemas Pleno", period: "10 anos 11 meses", color: "#f59e0b" },
+                    { name: "Assaí Atacadista", role: "Analista Sênior", period: "2022–2024", color: "#0ea5e9" },
+                    { name: "Google", role: "Consultor Mkt Digital", period: "2017–2018", color: "#a855f7" },
+                  ].map((emp, i) => (
+                    <div key={i} className="rounded-xl p-3 text-center transition-all duration-300 hover:-translate-y-1"
+                      style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${emp.color}22` }}>
+                      <div className="text-xs font-black text-white leading-tight">{emp.name}</div>
+                      <div className="text-xs text-gray-500 mt-1 leading-tight">{emp.role}</div>
+                      <div className="text-xs font-semibold mt-1" style={{ color: emp.color }}>{emp.period}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA + LinkedIn */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+                <a href="https://www.linkedin.com/in/erick-almeida1509/" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105"
+                  style={{ background: 'rgba(10,102,194,0.15)', border: '1px solid rgba(10,102,194,0.4)', color: '#60a5fa' }}>
+                  <Linkedin className="w-4 h-4" />
+                  Ver perfil no LinkedIn
+                </a>
+                <button onClick={scrollToContact}
+                  className="flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105"
+                  style={{ background: 'linear-gradient(135deg, #14b8a6, #0ea5e9)', boxShadow: '0 0 20px rgba(20,184,166,0.3)' }}>
+                  <MessageCircle className="w-4 h-4" />
+                  Falar com Erick Agora
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline real da carreira */}
+          <div className="mt-20 md:mt-28">
+            <div className="text-center mb-12 space-y-2">
+              <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">Trajetória Real</div>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black">
+                DE APRENDIZ A{" "}
+                <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  LÍDER DE PLATAFORMA GLOBAL.
+                </span>
+              </h3>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              {/* Linha central */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-px hidden md:block"
+                style={{ background: 'linear-gradient(to bottom, transparent, rgba(20,184,166,0.5), rgba(245,158,11,0.5), rgba(168,85,247,0.5), transparent)' }} />
+
+              <div className="space-y-6 md:space-y-0">
+                {[
+                  {
+                    year: "2011–2012", side: "left",
+                    title: "Programa Aprendiz Formare — Saint-Gobain",
+                    desc: "Primeira turma do programa. Rodízio em Planejamento, Importação, Exportação, Marketing e Customer Service. A base de tudo.",
+                    color: "#14b8a6", icon: "🌱"
+                  },
+                  {
+                    year: "2012–2020", side: "right",
+                    title: "8 anos na Saint-Gobain Brasil",
+                    desc: "Crescimento de Aprendiz a Analista de Informações Comerciais Pleno. Key User SAP SD, gestão de carteira de pedidos e relatórios estratégicos para a diretoria.",
+                    color: "#f59e0b", icon: "📈"
+                  },
+                  {
+                    year: "2017–2018", side: "left",
+                    title: "Consultor de Marketing Digital — Google",
+                    desc: "Projeto de Marketing Digital no escritório da Google em SP. Desenvolvimento de metodologia própria integrando dados e marketing para otimização de funil de leads.",
+                    color: "#0ea5e9", icon: "🎯"
+                  },
+                  {
+                    year: "2020–2022", side: "right",
+                    title: "Analista de Inteligência de Mercado — Saint-Gobain",
+                    desc: "Gestão de NPS, Key Accounts e segmentação de mercado. Liderança de CRM com Salesforce, SAP e Microstrategy. +20% de satisfação de clientes.",
+                    color: "#a855f7", icon: "🔍"
+                  },
+                  {
+                    year: "2021–atual", side: "left",
+                    title: "Fundação da EBL Soluções Corporativas",
+                    desc: "Criação da consultoria para levar expertise corporativa a PMEs. Automação, CRM, BI e presença digital para empresas que querem crescer de verdade.",
+                    color: "#14b8a6", icon: "🚀"
+                  },
+                  {
+                    year: "2022–2024", side: "right",
+                    title: "Analista Sênior — Assaí Atacadista",
+                    desc: "+17% de crescimento na base de clientes em 2 meses com Marketing Cloud. -30% no tempo de processamento de dados via ETL. Dashboards Power BI e Tableau.",
+                    color: "#f59e0b", icon: "⚡"
+                  },
+                  {
+                    year: "2024–atual", side: "left",
+                    title: "Analista de CRM Sênior & Líder Técnico — ELGIN S.A.",
+                    desc: "Liderança da evolução do Salesforce Sales Cloud. Arquitetura de MVPs, integrações via API com ERP/estoque/faturamento. Ponto focal de CRM para toda a empresa.",
+                    color: "#0ea5e9", icon: "🏆"
+                  },
+                ].map((item, i) => (
+                  <div key={i} className={`relative md:flex md:items-start md:gap-8 mb-8 md:mb-10 ${item.side === 'right' ? 'md:flex-row-reverse' : ''}`}>
+                    <div className={`md:w-5/12 ${item.side === 'right' ? 'md:text-right' : ''}`}>
+                      <div className="rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                        style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${item.color}25`, boxShadow: `0 4px 20px ${item.color}08` }}>
+                        <div className="flex items-center gap-2 mb-2" style={{ justifyContent: item.side === 'right' ? 'flex-end' : 'flex-start' }}>
+                          <span className="text-lg">{item.icon}</span>
+                          <div className="text-xs font-black uppercase tracking-widest" style={{ color: item.color }}>{item.year}</div>
+                        </div>
+                        <div className="text-sm font-bold text-white mb-2 leading-tight">{item.title}</div>
+                        <div className="text-xs text-gray-400 leading-relaxed">{item.desc}</div>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex md:w-2/12 justify-center pt-5">
+                      <div className="w-4 h-4 rounded-full border-2 z-10 flex-shrink-0"
+                        style={{ background: item.color, borderColor: item.color, boxShadow: `0 0 16px ${item.color}` }} />
+                    </div>
+                    <div className="hidden md:block md:w-5/12" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Resultados reais comprovados */}
+          <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { value: "+20%", label: "NPS na Saint-Gobain", color: "#14b8a6" },
+              { value: "+17%", label: "Base de clientes em 2 meses", color: "#f59e0b" },
+              { value: "-30%", label: "Tempo de processamento de dados", color: "#0ea5e9" },
+              { value: "14+", label: "Anos de experiência comprovada", color: "#a855f7" },
+            ].map((stat, i) => (
+              <div key={i} className="rounded-2xl p-5 text-center transition-all duration-300 hover:-translate-y-2"
+                style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${stat.color}25`, boxShadow: `0 4px 20px ${stat.color}08` }}>
+                <div className="text-2xl sm:text-3xl font-black mb-2" style={{ color: stat.color }}>{stat.value}</div>
+                <div className="text-xs text-gray-400 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* DEPOIMENTOS */}
       <section className="py-16 sm:py-20 md:py-28">
         <div className="container">
@@ -704,7 +1005,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
             <div className="flex items-center gap-3">
               <img src="/assets/logo_ebl.png" alt="EBL Logo" className="h-6 w-auto opacity-60" />
-              <span>© 2025 EBL Soluções Corporativas. Todos os direitos reservados.</span>
+              <span>© 2026 EBL Soluções Corporativas. Todos os direitos reservados.</span>
             </div>
             <div>
               Desenvolvido por{" "}
