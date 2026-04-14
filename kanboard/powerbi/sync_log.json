@@ -1,0 +1,56 @@
+{
+  "inicio": "2026-04-14T13:38:09.712902+00:00",
+  "fim": "2026-04-14T13:39:17.938974+00:00",
+  "status": "concluido_com_erros",
+  "etapas": [
+    {
+      "etapa": "Autenticação Power BI",
+      "status": "falha",
+      "timestamp": "2026-04-14T13:38:13.128241+00:00",
+      "detalhes": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 0b386743-42ef-4eb8-a24f-d8dc214a1000 Correlation ID: 48271b63-b746-4eb0-85de-2d13118a2268 Timestamp: 2026-04-14 13:38:12Z"
+    },
+    {
+      "etapa": "Buscar tarefas Kanboard",
+      "status": "sucesso",
+      "timestamp": "2026-04-14T13:39:17.922934+00:00",
+      "detalhes": "Total: 389 tarefas (abertas: 389, fechadas: 0)"
+    },
+    {
+      "etapa": "Enriquecer tarefas",
+      "status": "sucesso",
+      "timestamp": "2026-04-14T13:39:17.933834+00:00",
+      "detalhes": "389 tarefas enriquecidas"
+    },
+    {
+      "etapa": "Calcular KPIs/Fases/Responsáveis",
+      "status": "sucesso",
+      "timestamp": "2026-04-14T13:39:17.934891+00:00",
+      "detalhes": "KPIs: 8, Fases: 44, Responsáveis: 5"
+    },
+    {
+      "etapa": "Sincronização Power BI",
+      "status": "pulado",
+      "timestamp": "2026-04-14T13:39:17.934988+00:00",
+      "detalhes": "MFA habilitado — desabilitar MFA ou usar service principal com certificado"
+    },
+    {
+      "etapa": "Salvar CSV",
+      "status": "sucesso",
+      "timestamp": "2026-04-14T13:39:17.938807+00:00",
+      "detalhes": "389 registros em /home/ubuntu/kanboard/powerbi/kanboard_dados_final.csv"
+    }
+  ],
+  "erros": [
+    {
+      "etapa": "Autenticação Power BI",
+      "erro": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 0b386743-42ef-4eb8-a24f-d8dc214a1000 Correlation ID: 48271b63-b746-4eb0-85de-2d13118a2268 Timestamp: 2026-04-14 13:38:12Z",
+      "timestamp": "2026-04-14T13:38:13.128042+00:00"
+    }
+  ],
+  "totais": {
+    "tarefas": 389,
+    "kpis": 8,
+    "fases": 44,
+    "responsaveis": 5
+  }
+}
