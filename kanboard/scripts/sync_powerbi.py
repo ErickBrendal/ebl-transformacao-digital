@@ -35,9 +35,9 @@ PBI_PASSWORD      = "Senha@2026"
 PBI_DATASET_ID    = "39d50fe5-cde9-4244-b5e5-422a73e8e142"
 PBI_SCOPE         = ["https://analysis.windows.net/powerbi/api/.default"]
 
-EXCEL_MAP_PATH    = "/home/ubuntu/kanboard/excel_map.json"
-OUTPUT_CSV        = "/home/ubuntu/kanboard/powerbi/kanboard_dados_final.csv"
-OUTPUT_LOG        = "/home/ubuntu/kanboard/powerbi/sync_log.json"
+EXCEL_MAP_PATH    = "/home/ubuntu/kanboard/kanboard/excel_map.json"
+OUTPUT_CSV        = "/home/ubuntu/kanboard/kanboard/powerbi/kanboard_dados_final.csv"
+OUTPUT_LOG        = "/home/ubuntu/kanboard/kanboard/powerbi/sync_log.json"
 BATCH_SIZE        = 500
 
 # ─── Logging ─────────────────────────────────────────────────────────────────
