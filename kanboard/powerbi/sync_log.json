@@ -1,50 +1,50 @@
 {
-  "inicio": "2026-04-23T13:02:28.773792+00:00",
-  "fim": "2026-04-23T13:04:00.016998+00:00",
+  "inicio": "2026-04-26T13:01:57.791947+00:00",
+  "fim": "2026-04-26T13:03:42.157962+00:00",
   "status": "concluido_com_erros",
   "etapas": [
     {
       "etapa": "Autenticação Power BI",
       "status": "falha",
-      "timestamp": "2026-04-23T13:02:39.067397+00:00",
-      "detalhes": "AADSTS50053: The account is locked, you've tried to sign in too many times with an incorrect user ID or password. Trace ID: 36ffab09-c1f6-49d2-b383-0a2e5fdd2e00 Correlation ID: 88bf3824-90e4-47f6-9987-afbbed0c6451 Timestamp: 2026-04-23 13:02:38Z"
+      "timestamp": "2026-04-26T13:02:01.850579+00:00",
+      "detalhes": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 69fb3588-6e51-4648-8c57-90cdc51daa00 Correlation ID: 98d55ce3-448d-431d-96c4-9bc5aa097ddd Timestamp: 2026-04-26 13:02:01Z"
     },
     {
       "etapa": "Buscar tarefas Kanboard",
       "status": "sucesso",
-      "timestamp": "2026-04-23T13:04:00.000427+00:00",
+      "timestamp": "2026-04-26T13:03:42.142010+00:00",
       "detalhes": "Total: 389 tarefas (abertas: 389, fechadas: 0)"
     },
     {
       "etapa": "Enriquecer tarefas",
       "status": "sucesso",
-      "timestamp": "2026-04-23T13:04:00.012091+00:00",
+      "timestamp": "2026-04-26T13:03:42.152860+00:00",
       "detalhes": "389 tarefas enriquecidas"
     },
     {
       "etapa": "Calcular KPIs/Fases/Responsáveis",
       "status": "sucesso",
-      "timestamp": "2026-04-23T13:04:00.013193+00:00",
+      "timestamp": "2026-04-26T13:03:42.154026+00:00",
       "detalhes": "KPIs: 8, Fases: 43, Responsáveis: 39"
     },
     {
       "etapa": "Sincronização Power BI",
       "status": "pulado",
-      "timestamp": "2026-04-23T13:04:00.013309+00:00",
+      "timestamp": "2026-04-26T13:03:42.154136+00:00",
       "detalhes": "MFA habilitado — desabilitar MFA ou usar service principal com certificado"
     },
     {
       "etapa": "Salvar CSV",
       "status": "sucesso",
-      "timestamp": "2026-04-23T13:04:00.016846+00:00",
+      "timestamp": "2026-04-26T13:03:42.157698+00:00",
       "detalhes": "389 registros em /home/ubuntu/kanboard/kanboard/powerbi/kanboard_dados_final.csv"
     }
   ],
   "erros": [
     {
       "etapa": "Autenticação Power BI",
-      "erro": "AADSTS50053: The account is locked, you've tried to sign in too many times with an incorrect user ID or password. Trace ID: 36ffab09-c1f6-49d2-b383-0a2e5fdd2e00 Correlation ID: 88bf3824-90e4-47f6-9987-afbbed0c6451 Timestamp: 2026-04-23 13:02:38Z",
-      "timestamp": "2026-04-23T13:02:39.067204+00:00"
+      "erro": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 69fb3588-6e51-4648-8c57-90cdc51daa00 Correlation ID: 98d55ce3-448d-431d-96c4-9bc5aa097ddd Timestamp: 2026-04-26 13:02:01Z",
+      "timestamp": "2026-04-26T13:02:01.850392+00:00"
     }
   ],
   "totais": {
