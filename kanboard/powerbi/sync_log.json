@@ -1,50 +1,50 @@
 {
-  "inicio": "2026-04-26T13:01:57.791947+00:00",
-  "fim": "2026-04-26T13:03:42.157962+00:00",
+  "inicio": "2026-04-27T13:03:38.531794+00:00",
+  "fim": "2026-04-27T13:04:30.136173+00:00",
   "status": "concluido_com_erros",
   "etapas": [
     {
       "etapa": "Autenticação Power BI",
       "status": "falha",
-      "timestamp": "2026-04-26T13:02:01.850579+00:00",
-      "detalhes": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 69fb3588-6e51-4648-8c57-90cdc51daa00 Correlation ID: 98d55ce3-448d-431d-96c4-9bc5aa097ddd Timestamp: 2026-04-26 13:02:01Z"
+      "timestamp": "2026-04-27T13:03:41.241008+00:00",
+      "detalhes": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: ddf8ff08-b450-4811-ab00-329db6470600 Correlation ID: fa0b43eb-d55d-46e0-a223-0d0887f1d28d Timestamp: 2026-04-27 13:03:41Z"
     },
     {
       "etapa": "Buscar tarefas Kanboard",
       "status": "sucesso",
-      "timestamp": "2026-04-26T13:03:42.142010+00:00",
+      "timestamp": "2026-04-27T13:04:30.113899+00:00",
       "detalhes": "Total: 389 tarefas (abertas: 389, fechadas: 0)"
     },
     {
       "etapa": "Enriquecer tarefas",
       "status": "sucesso",
-      "timestamp": "2026-04-26T13:03:42.152860+00:00",
+      "timestamp": "2026-04-27T13:04:30.130654+00:00",
       "detalhes": "389 tarefas enriquecidas"
     },
     {
       "etapa": "Calcular KPIs/Fases/Responsáveis",
       "status": "sucesso",
-      "timestamp": "2026-04-26T13:03:42.154026+00:00",
+      "timestamp": "2026-04-27T13:04:30.132022+00:00",
       "detalhes": "KPIs: 8, Fases: 43, Responsáveis: 39"
     },
     {
       "etapa": "Sincronização Power BI",
       "status": "pulado",
-      "timestamp": "2026-04-26T13:03:42.154136+00:00",
+      "timestamp": "2026-04-27T13:04:30.132170+00:00",
       "detalhes": "MFA habilitado — desabilitar MFA ou usar service principal com certificado"
     },
     {
       "etapa": "Salvar CSV",
       "status": "sucesso",
-      "timestamp": "2026-04-26T13:03:42.157698+00:00",
+      "timestamp": "2026-04-27T13:04:30.135996+00:00",
       "detalhes": "389 registros em /home/ubuntu/kanboard/kanboard/powerbi/kanboard_dados_final.csv"
     }
   ],
   "erros": [
     {
       "etapa": "Autenticação Power BI",
-      "erro": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: 69fb3588-6e51-4648-8c57-90cdc51daa00 Correlation ID: 98d55ce3-448d-431d-96c4-9bc5aa097ddd Timestamp: 2026-04-26 13:02:01Z",
-      "timestamp": "2026-04-26T13:02:01.850392+00:00"
+      "erro": "AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000009-0000-0000-c000-000000000000'. Trace ID: ddf8ff08-b450-4811-ab00-329db6470600 Correlation ID: fa0b43eb-d55d-46e0-a223-0d0887f1d28d Timestamp: 2026-04-27 13:03:41Z",
+      "timestamp": "2026-04-27T13:03:41.240753+00:00"
     }
   ],
   "totais": {
