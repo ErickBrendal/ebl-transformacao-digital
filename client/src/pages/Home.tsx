@@ -831,10 +831,10 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full font-bold py-5" variant="outline"
+              <Button className="w-full font-bold py-5 text-sm sm:text-[15px] whitespace-nowrap" variant="outline"
                 style={{ borderColor: `${EBL.blueBright}55`, color: EBL.blueSoft }} asChild>
                 <a href={whatsappUrl1} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('5511974455563')}>
-                  Solicitar Diagnóstico Gratuito
+                  Diagnóstico Gratuito
                 </a>
               </Button>
             </div>
@@ -847,8 +847,9 @@ export default function Home() {
                 boxShadow: `0 0 40px ${EBL.goldMid}28, 0 20px 60px rgba(0,0,0,0.45)`,
               }}>
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className="px-5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-[0.18em] flex items-center gap-1.5 btn-gold">
-                  <Crown className="w-3 h-3" /> MAIS PROCURADO
+                <div className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.15em] flex items-center gap-1.5 btn-gold whitespace-nowrap">
+                  <Crown className="w-3 h-3 flex-shrink-0" />
+                  <span>MAIS PROCURADO</span>
                 </div>
               </div>
               <div>
@@ -867,9 +868,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full font-black py-5 text-base btn-gold" asChild>
+              <Button className="w-full font-black py-5 text-sm sm:text-[15px] btn-gold whitespace-nowrap" asChild>
                 <a href={whatsappUrl1} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('5511974455563')}>
-                  SOLICITAR DIAGNÓSTICO GRATUITO
+                  DIAGNÓSTICO GRATUITO
                 </a>
               </Button>
             </div>
@@ -893,10 +894,10 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full font-bold py-5" variant="outline"
+              <Button className="w-full font-bold py-5 text-sm sm:text-[15px] whitespace-nowrap" variant="outline"
                 style={{ borderColor: `${EBL.blueBright}55`, color: EBL.blueSoft }} asChild>
                 <a href={whatsappUrl1} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('5511974455563')}>
-                  Solicitar Diagnóstico Gratuito
+                  Diagnóstico Gratuito
                 </a>
               </Button>
             </div>
