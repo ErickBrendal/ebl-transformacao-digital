@@ -1115,8 +1115,8 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
                 <Globe className="w-4 h-4" style={{ color: EBL.blueSoft }} />
-                <a href="https://www.instagram.com/eblsolucoescorporatives/" target="_blank" rel="noopener noreferrer"
-                  className="hover:text-white transition-colors">@eblsolucoescorporatives</a>
+                <a href="https://www.instagram.com/eblsolucoescorporativas/" target="_blank" rel="noopener noreferrer"
+                  className="hover:text-white transition-colors">@eblsolucoescorporativas</a>
               </div>
             </div>
           </div>
@@ -1135,8 +1135,8 @@ export default function Home() {
               Desenvolvido por{" "}
               <span className="font-bold" style={{ color: EBL.goldBright }}>Erick Almeida</span>
               {" "}—{" "}
-              <a href="https://www.instagram.com/erickbrendal" target="_blank" rel="noopener noreferrer"
-                className="hover:text-white transition-colors">@erickbrendal</a>
+              <a href="https://www.instagram.com/erickbrendallin" target="_blank" rel="noopener noreferrer"
+                className="hover:text-white transition-colors">@erickbrendallin</a>
             </div>
           </div>
         </div>
