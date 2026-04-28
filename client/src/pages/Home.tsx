@@ -380,8 +380,8 @@ export default function Home() {
                 </div>
                 <div className="absolute -bottom-3 -left-3 sm:-left-5 px-4 py-2.5 rounded-2xl animate-float-simple"
                   style={{ animationDelay: '0.5s', background: 'rgba(6,9,26,0.96)', border: `1px solid ${EBL.blueBright}88`, boxShadow: `0 8px 32px ${EBL.blueBright}40` }}>
-                  <div className="text-2xl font-black" style={{ color: EBL.blueSoft }}>50+</div>
-                  <div className="text-[10px] text-gray-400 font-medium leading-tight">Empresas<br />transformadas</div>
+                  <div className="text-2xl font-black" style={{ color: EBL.blueSoft }}>10+</div>
+                  <div className="text-[10px] text-gray-400 font-medium leading-tight">Empresas<br />atendidas</div>
                 </div>
                 <div className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-7 px-3 py-2 rounded-xl animate-float-simple"
                   style={{ animationDelay: '1s', background: 'rgba(6,9,26,0.96)', border: `1px solid ${EBL.goldMid}77` }}>
@@ -391,7 +391,7 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-3 w-full max-w-sm">
                 {[
-                  { end: 50, suffix: "+", label: "Empresas atendidas", color: EBL.blueBright },
+                  { end: 10, suffix: "+", label: "Empresas em projetos", color: EBL.blueBright },
                   { end: 14, suffix: "+", label: "Anos de mercado", color: EBL.goldBright },
                   { end: 24, suffix: "/7", label: "Operação contínua", color: EBL.blueSoft }
                 ].map((stat, i) => (
