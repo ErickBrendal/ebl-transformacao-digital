@@ -688,13 +688,17 @@ export default function Home() {
 
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Erick Almeida é <span className="text-white font-semibold">Analista Sênior de CRM e Líder de Plataforma Salesforce</span> com mais de <span className="font-semibold" style={{ color: EBL.goldBright }}>14 anos de experiência</span> em transformação digital, inteligência de dados e automação de processos. Formado em Análise e Desenvolvimento de Sistemas pela <span className="text-white font-semibold">Faculdade das Américas (FAM)</span>, com pós-graduação em Engenharia de Software pela <span className="text-white font-semibold">Descomplica</span> e especialização em Mercado Financeiro pela <span className="text-white font-semibold">FEBRABAN</span>.
+                  Erick Almeida é <span className="text-white font-semibold">Analista Sênior de CRM e Líder de Plataforma Salesforce</span> com mais de <span className="font-semibold" style={{ color: EBL.goldBright }}>14 anos de experiência</span> em transformação digital, inteligência de dados e automação de processos. Formado em Análise e Desenvolvimento de Sistemas pela <span className="text-white font-semibold">Faculdade das Américas (FAM)</span>, com pós-graduações em <span className="text-white font-semibold">Engenharia de Software</span> e <span className="text-white font-semibold">Terapia Cognitivo Comportamental</span> pela <span className="text-white font-semibold">Descomplica</span>, além de especialização em Mercado Financeiro pela <span className="text-white font-semibold">FEBRABAN</span>.
                 </p>
                 <p>
                   Ao longo da carreira, liderou projetos de alto impacto na <span className="font-semibold" style={{ color: EBL.blueSoft }}>ELGIN S.A.</span>, <span className="font-semibold" style={{ color: EBL.blueSoft }}>Saint-Gobain Brasil</span> e <span className="font-semibold" style={{ color: EBL.blueSoft }}>Assaí Atacadista</span> — entregando resultados como <span className="font-semibold" style={{ color: EBL.goldBright }}>+20% de NPS</span>, <span className="font-semibold" style={{ color: EBL.goldBright }}>+17% de crescimento na base de clientes em 2 meses</span> e <span className="font-semibold" style={{ color: EBL.goldBright }}>-30% no tempo de processamento de dados</span>.
                 </p>
                 <p>
                   Fundador da <span className="text-white font-semibold">EBL Soluções Corporativas</span>, Erick aplica toda essa expertise para ajudar pequenas, médias e grandes empresas a dominarem o mercado digital — com automação, IA, CRM, presença online e estratégias orientadas por dados.
+                </p>
+                <p className="rounded-2xl p-4 sm:p-5" style={{ background: `${EBL.goldMid}0a`, border: `1px solid ${EBL.goldMid}33` }}>
+                  <span className="font-bold text-white block mb-1.5">⚡ Diferencial: Tecnologia + Comportamento Humano.</span>
+                  Com pós-graduação em <span className="font-semibold" style={{ color: EBL.goldBright }}>Terapia Cognitivo Comportamental</span>, Erick une rigor técnico e ciência comportamental para projetar soluções que <span className="text-white font-semibold">as pessoas realmente usam</span> — UX guiada por dados de comportamento, IA conversacional natural e processos de change management que reduzem a resistência à transformação digital.
                 </p>
               </div>
 
@@ -704,9 +708,10 @@ export default function Home() {
                   { label: "BI & Dados", sub: "Power BI · Tableau · SQL · ETL", color: EBL.goldBright },
                   { label: "Automação & IA", sub: "RPA · Agentes · n8n · Make", color: EBL.blueSoft },
                   { label: "Marketing Digital", sub: "Marketing Cloud · Google · Meta", color: EBL.goldMid },
+                  { label: "Comportamento & UX", sub: "TCC · Change Management · UX Research", color: EBL.goldBright, span: true },
                 ].map((skill, i) => (
-                  <div key={i} className="rounded-xl p-4 space-y-1 transition-all duration-300 hover:-translate-y-1"
-                    style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${skill.color}33` }}>
+                  <div key={i} className={`rounded-xl p-4 space-y-1 transition-all duration-300 hover:-translate-y-1 ${(skill as any).span ? 'col-span-2' : ''}`}
+                    style={{ background: (skill as any).span ? `linear-gradient(135deg, ${EBL.goldMid}10, rgba(255,255,255,0.03))` : 'rgba(255,255,255,0.03)', border: `1px solid ${skill.color}33` }}>
                     <div className="text-sm font-bold text-white">{skill.label}</div>
                     <div className="text-xs text-gray-500 leading-relaxed">{skill.sub}</div>
                   </div>
@@ -728,6 +733,7 @@ export default function Home() {
                     { cert: "Google Workspace & Gemini IA", org: "Google" },
                     { cert: "Double Star Ranger", org: "Trailhead by Salesforce" },
                     { cert: "Pós-graduação Eng. de Software", org: "Descomplica" },
+                    { cert: "Pós-graduação Terapia Cognitivo Comportamental", org: "Descomplica" },
                     { cert: "Mercado Financeiro", org: "FEBRABAN" },
                   ].map((c, i) => (
                     <div key={i} className="flex items-start gap-2 py-1">
