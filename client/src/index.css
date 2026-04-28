@@ -328,3 +328,47 @@
   background: linear-gradient(180deg, #3b6df0, #f4cf63);
 }
 ::selection { background: rgba(212, 160, 23, 0.45); color: white; }
+
+/* ===== Anchor scroll offset (so #section anchors don't hide under fixed navbar) ===== */
+section[id] {
+  scroll-margin-top: 88px;
+}
+@media (min-width: 640px) {
+  section[id] {
+    scroll-margin-top: 96px;
+  }
+}
+
+/* ===== Mobile-safe CTA tap targets (min 44x44 for accessibility) ===== */
+@media (max-width: 640px) {
+  button, a[href], [role="button"] {
+    min-height: 44px;
+  }
+  /* Restaurar height auto para botões em-line dentro de blocos de texto */
+  p button, p a, .restore-target { min-height: 0; }
+}
+
+/* ===== Premium link hover underline ===== */
+a:not([class*='btn'], [class*='Button']):hover {
+  text-underline-offset: 4px;
+}
+
+/* ===== Card lift premium ===== */
+.card-premium {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 160, 23, 0.25);
+}
+
+/* ===== Reduce motion friendly ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

@@ -212,10 +212,38 @@ export default function Home() {
     { icon: HeadphonesIcon, title: "Suporte & Sustentação 24/7", description: "Sua operação digital nunca para. Suporte contínuo para garantir máximo desempenho em todo momento.", highlight: "Paz de espírito garantida", iconColor: EBL.goldMid }
   ];
 
-  const testimonials = [
-    { name: "Carlos Mendes", role: "CEO, Clínica Saúde Total", text: "Em 3 meses com a EBL nossa agenda lotou e paramos de perder clientes para a concorrência. O site novo e o Google Business foram game-changers.", stars: 5, result: "+180% de agendamentos" },
-    { name: "Ana Paula Ferreira", role: "Proprietária, Studio Beleza Premium", text: "Antes eu ficava respondendo mensagem o dia todo. Agora o agente de IA faz tudo automaticamente. Economizo mais de 3 horas por dia.", stars: 5, result: "3h economizadas/dia" },
-    { name: "Roberto Souza", role: "Diretor Comercial, TechVentures", text: "O CRM e a automação transformaram nosso processo de vendas. Fechamos 40% mais contratos no primeiro trimestre após a implementação.", stars: 5, result: "+40% em contratos" }
+  /* Casos de impacto enterprise comprovados (LinkedIn) */
+  const enterpriseCases = [
+    {
+      company: "Saint-Gobain Brasil",
+      role: "Inteligência de Mercado & CRM",
+      result: "+20% de NPS",
+      detail: "Liderança de CRM com Salesforce, SAP e Microstrategy. Gestão de Key Accounts e segmentação de mercado para o segmento industrial.",
+      tools: ["Salesforce", "SAP", "Microstrategy"],
+      year: "2020–2022",
+      icon: "📈",
+      color: EBL.goldBright,
+    },
+    {
+      company: "Assaí Atacadista",
+      role: "Analista Sênior de CRM",
+      result: "+17% base de clientes em 2 meses",
+      detail: "Marketing Cloud + ETL otimizado: -30% no tempo de processamento de dados. Dashboards Power BI e Tableau para tomada de decisão.",
+      tools: ["Marketing Cloud", "Power BI", "Tableau"],
+      year: "2022–2024",
+      icon: "⚡",
+      color: EBL.blueBright,
+    },
+    {
+      company: "ELGIN S.A.",
+      role: "Líder Técnico de Salesforce",
+      result: "Plataforma CRM unificada",
+      detail: "Arquitetura de MVPs e integrações via API com ERP, estoque e faturamento. Ponto focal de CRM para toda a empresa.",
+      tools: ["Salesforce Sales Cloud", "Apex/LWC", "API REST"],
+      year: "2024–atual",
+      icon: "🏆",
+      color: EBL.blueSoft,
+    },
   ];
 
   const faqs = [
@@ -240,7 +268,7 @@ export default function Home() {
 
       {/* WhatsApp Float */}
       <a href={whatsappUrl1} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('5511974455563')}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
         style={{ background: '#25D366', boxShadow: '0 4px 24px rgba(37, 211, 102, 0.5)' }}
         title="Fale no WhatsApp"
       >
@@ -269,8 +297,8 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-7 text-sm">
             <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-white transition-colors font-medium">Sobre</button>
             <button onClick={() => scrollToSection('pillars')} className="text-gray-300 hover:text-white transition-colors font-medium">Soluções</button>
+            <button onClick={() => scrollToSection('results')} className="text-gray-300 hover:text-white transition-colors font-medium">Resultados</button>
             <button onClick={() => scrollToSection('plans')} className="text-gray-300 hover:text-white transition-colors font-medium">Planos</button>
-            <button onClick={() => scrollToSection('process')} className="text-gray-300 hover:text-white transition-colors font-medium">Processo</button>
             <button onClick={() => scrollToSection('faq')} className="text-gray-300 hover:text-white transition-colors font-medium">FAQ</button>
             <Button size="sm" onClick={scrollToContact} className="font-bold px-5 py-2 btn-gold">
               Diagnóstico Gratuito
@@ -284,10 +312,11 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col gap-3"
             style={{ background: 'rgba(6, 9, 26, 0.98)', backdropFilter: 'blur(20px)', borderBottom: `1px solid ${EBL.goldMid}33` }}
           >
-            <button onClick={() => scrollToSection('about')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Sobre</button>
-            <button onClick={() => scrollToSection('pillars')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Soluções</button>
-            <button onClick={() => scrollToSection('plans')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Planos</button>
-            <button onClick={() => scrollToSection('process')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">Processo</button>
+            <button onClick={() => scrollToSection('about')} className="text-left text-gray-300 hover:text-white transition-colors py-3 font-medium">Sobre</button>
+            <button onClick={() => scrollToSection('pillars')} className="text-left text-gray-300 hover:text-white transition-colors py-3 font-medium">Soluções</button>
+            <button onClick={() => scrollToSection('results')} className="text-left text-gray-300 hover:text-white transition-colors py-3 font-medium">Resultados</button>
+            <button onClick={() => scrollToSection('plans')} className="text-left text-gray-300 hover:text-white transition-colors py-3 font-medium">Planos</button>
+            <button onClick={() => scrollToSection('process')} className="text-left text-gray-300 hover:text-white transition-colors py-3 font-medium">Processo</button>
             <button onClick={() => scrollToSection('faq')} className="text-left text-gray-300 hover:text-white transition-colors py-2 font-medium">FAQ</button>
             <Button onClick={scrollToContact} className="w-full font-bold mt-2 btn-gold">
               Diagnóstico Gratuito
@@ -297,7 +326,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+      <section id="hero" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12">
         <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse at 18% 50%, rgba(41,82,200,0.18) 0%, transparent 60%), radial-gradient(ellipse at 82% 25%, rgba(212,160,23,0.12) 0%, transparent 50%), radial-gradient(ellipse at 50% 100%, rgba(30,58,138,0.18) 0%, transparent 60%)` }} />
         <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full animate-glow-pulse pointer-events-none" style={{ background: `radial-gradient(circle, ${EBL.blueMid}33 0%, transparent 70%)`, filter: 'blur(40px)' }} />
@@ -311,13 +340,13 @@ export default function Home() {
                 <Crown className="w-3.5 h-3.5" />
                 Especialista Sênior · 14+ anos enterprise
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight">
+              <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] sm:leading-[1.02] tracking-tight">
                 <span className="text-white">A&nbsp;</span>
                 <span className="text-gradient-premium">TRANSFORMAÇÃO DIGITAL</span>
                 <span className="block text-white">QUE FAZ A SUA</span>
                 <span className="block text-gradient-gold">EMPRESA VENDER MAIS.</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+              <p className="text-[15px] sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
                 <span className="font-semibold text-white">Erick Almeida</span> traz a expertise enterprise de <span className="font-semibold" style={{ color: EBL.goldBright }}>ELGIN, Saint-Gobain, Assaí e Google</span> para projetar, implementar e operar a infraestrutura digital que sua empresa precisa para <span className="font-semibold" style={{ color: EBL.blueSoft }}>vender 24h por dia, automatizar o trabalho repetitivo e escalar com inteligência</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -383,13 +412,13 @@ export default function Home() {
                   <div className="text-2xl font-black" style={{ color: EBL.blueSoft }}>10+</div>
                   <div className="text-[10px] text-gray-400 font-medium leading-tight">Empresas<br />atendidas</div>
                 </div>
-                <div className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-7 px-3 py-2 rounded-xl animate-float-simple"
+                <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 -left-7 px-3 py-2 rounded-xl animate-float-simple items-center justify-center"
                   style={{ animationDelay: '1s', background: 'rgba(6,9,26,0.96)', border: `1px solid ${EBL.goldMid}77` }}>
                   <Sparkles className="w-4 h-4" style={{ color: EBL.goldBright }} />
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 w-full max-w-sm">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full max-w-sm">
                 {[
                   { end: 10, suffix: "+", label: "Empresas em projetos", color: EBL.blueBright },
                   { end: 14, suffix: "+", label: "Anos de mercado", color: EBL.goldBright },
@@ -443,7 +472,7 @@ export default function Home() {
               <TrendingDown className="w-4 h-4" />
               A Realidade do Mercado
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               SEU NEGÓCIO ESTÁ DEIXANDO MAIS DE{" "}
               <span style={{ color: '#f87171' }}>R$ 24.000 POR ANO</span>{" "}
               NA MESA.
@@ -486,7 +515,7 @@ export default function Home() {
               <Lightbulb className="w-4 h-4" />
               4 Pilares · Solução Completa
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
               TUDO QUE SUA EMPRESA PRECISA{" "}
               <span className="block text-gradient-premium">PARA DOMINAR O DIGITAL.</span>
             </h2>
@@ -555,7 +584,7 @@ export default function Home() {
               <Network className="w-4 h-4" />
               Soluções específicas dentro de cada Pilar
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               A INFRAESTRUTURA COMPLETA{" "}
               <span className="text-gradient-premium">QUE SUA EMPRESA PRECISA.</span>
             </h2>
@@ -592,7 +621,7 @@ export default function Home() {
               <Users className="w-4 h-4" />
               O Especialista por Trás da Transformação
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
               14 ANOS TRANSFORMANDO{" "}
               <span className="block text-gradient-premium">DADOS EM CRESCIMENTO.</span>
             </h2>
@@ -640,7 +669,7 @@ export default function Home() {
                   <div className="text-2xl font-black" style={{ color: EBL.blueSoft }}>500+</div>
                   <div className="text-[11px] text-gray-400 font-medium leading-tight">Conexões<br />LinkedIn</div>
                 </div>
-                <div className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 px-4 py-3 rounded-2xl animate-float"
+                <div className="hidden md:block absolute top-1/2 -right-8 -translate-y-1/2 px-4 py-3 rounded-2xl animate-float"
                   style={{ animationDelay: '0.8s', background: 'rgba(6,9,26,0.97)', border: `1px solid ${EBL.goldBright}77`, boxShadow: `0 8px 32px ${EBL.goldBright}30` }}>
                   <div className="text-2xl font-black" style={{ color: EBL.goldMid }}>6+</div>
                   <div className="text-[11px] text-gray-400 font-medium leading-tight">Certificações<br />oficiais</div>
@@ -775,7 +804,7 @@ export default function Home() {
               <DollarSign className="w-4 h-4" />
               O Caminho para a Escala
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               ESCOLHA O NÍVEL DE{" "}
               <span className="text-gradient-premium">DOMÍNIO DIGITAL</span>{" "}
               QUE SEU NEGÓCIO PRECISA.
@@ -811,7 +840,7 @@ export default function Home() {
             </div>
 
             {/* Profissional - DESTAQUE */}
-            <div className="rounded-2xl p-7 space-y-6 relative transition-all duration-300 hover:-translate-y-3 md:-mt-4"
+            <div className="rounded-2xl p-7 space-y-6 relative transition-all duration-300 hover:-translate-y-3 lg:-mt-4"
               style={{
                 background: `linear-gradient(135deg, ${EBL.blueDeep}33, ${EBL.goldMid}1a)`,
                 border: `2px solid ${EBL.goldMid}88`,
@@ -875,40 +904,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DEPOIMENTOS */}
-      <section className="py-16 sm:py-20 md:py-28">
-        <div className="container">
+      {/* RESULTADOS ENTERPRISE */}
+      <section id="results" className="py-16 sm:py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse at 50% 0%, ${EBL.goldMid}12 0%, transparent 60%)` }} />
+        <div className="container relative z-10">
           <div className="text-center mb-12 md:mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
               style={{ background: `${EBL.goldMid}15`, border: `1px solid ${EBL.goldMid}55`, color: EBL.goldBright }}>
-              <Star className="w-4 h-4" />
-              Resultados Reais
+              <TrendingUp className="w-4 h-4" />
+              Casos de Impacto Comprovados
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
-              CLIENTES QUE JÁ{" "}
-              <span className="text-gradient-premium">TRANSFORMARAM</span>{" "}
-              SEUS NEGÓCIOS.
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.05]">
+              RESULTADOS REAIS{" "}
+              <span className="block sm:inline text-gradient-premium">EM EMPRESAS DE GRANDE PORTE.</span>
             </h2>
+            <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+              Indicadores comprovados que liderei em multinacionais — a mesma metodologia, agora aplicada ao seu negócio.
+              <span className="block mt-2 text-xs sm:text-sm" style={{ color: EBL.goldBright }}>
+                Disponíveis para validação no <a href="https://www.linkedin.com/in/erick-almeida1509/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white transition-colors">meu LinkedIn</a>.
+              </span>
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="rounded-2xl p-7 space-y-5 relative transition-all duration-300 hover:-translate-y-2"
-                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div className="absolute top-4 right-6 text-7xl leading-none font-serif" style={{ color: `${EBL.goldMid}28`, fontFamily: 'Playfair Display, serif' }}>"</div>
-                <div className="flex gap-1 relative z-10">
-                  {[...Array(t.stars)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" style={{ color: EBL.goldBright }} />)}
-                </div>
-                <p className="text-gray-300 leading-relaxed text-sm relative z-10">"{t.text}"</p>
-                <div className="pt-2 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-                  <div className="font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-gray-500">{t.role}</div>
-                  <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold"
-                    style={{ background: `${EBL.goldMid}1f`, color: EBL.goldBright }}>
-                    <TrendingUp className="w-3 h-3" />{t.result}
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
+            {enterpriseCases.map((c, i) => (
+              <div key={i} className="group rounded-2xl p-6 sm:p-7 space-y-4 relative transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${c.color}33`, boxShadow: `0 4px 24px ${c.color}10` }}>
+                <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full opacity-20 blur-3xl pointer-events-none transition-opacity group-hover:opacity-40"
+                  style={{ background: c.color }} />
+                <div className="relative z-10 flex items-center justify-between">
+                  <div className="text-3xl">{c.icon}</div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.18em] px-2.5 py-1 rounded-full"
+                    style={{ background: `${c.color}1a`, color: c.color, border: `1px solid ${c.color}40` }}>
+                    {c.year}
                   </div>
+                </div>
+                <div className="relative z-10 space-y-1.5 pt-1">
+                  <div className="text-xs font-bold uppercase tracking-widest" style={{ color: c.color }}>{c.company}</div>
+                  <div className="text-base sm:text-lg font-bold text-white leading-tight">{c.role}</div>
+                </div>
+                <div className="relative z-10 py-3 border-y" style={{ borderColor: `${c.color}25` }}>
+                  <div className="text-2xl sm:text-3xl font-black tracking-tight" style={{ color: c.color, fontFamily: 'Playfair Display, serif' }}>
+                    {c.result}
+                  </div>
+                </div>
+                <p className="relative z-10 text-sm text-gray-400 leading-relaxed">{c.detail}</p>
+                <div className="relative z-10 flex flex-wrap gap-1.5 pt-1">
+                  {c.tools.map((t, j) => (
+                    <span key={j} className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md"
+                      style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${c.color}25`, color: 'rgba(255,255,255,0.7)' }}>
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Linha de credibilidade */}
+          <div className="mt-12 sm:mt-14 max-w-3xl mx-auto rounded-2xl p-6 sm:p-7 text-center"
+            style={{ background: `linear-gradient(135deg, ${EBL.blueDeep}25, ${EBL.goldMid}10)`, border: `1px solid ${EBL.goldMid}40` }}>
+            <Shield className="w-7 h-7 mx-auto mb-3" style={{ color: EBL.goldBright }} />
+            <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+              <span className="font-bold text-white">Mesma metodologia, agora ao alcance da sua empresa.</span> A expertise enterprise que entreguei resultados comprovados em <span className="font-semibold" style={{ color: EBL.goldBright }}>Saint-Gobain, Assaí e ELGIN</span> aplicada ao tamanho e à velocidade do seu negócio.
+            </p>
+            <button onClick={scrollToContact}
+              className="mt-5 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 btn-gold">
+              <MessageCircle className="w-4 h-4" />
+              Quero esses resultados na minha empresa
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
@@ -922,7 +986,7 @@ export default function Home() {
               <Target className="w-4 h-4" />
               Método Estruturado
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               DO DIAGNÓSTICO À{" "}
               <span className="text-gradient-premium">TRANSFORMAÇÃO REAL.</span>
             </h2>
@@ -962,7 +1026,7 @@ export default function Home() {
               <Clock className="w-4 h-4" />
               Urgência
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               CADA DIA DE ATRASO É UM DIA DE{" "}
               <span style={{ color: '#f87171' }}>LUCRO PERDIDO.</span>
             </h2>
@@ -995,7 +1059,7 @@ export default function Home() {
               <MessageCircle className="w-4 h-4" />
               Perguntas Frequentes
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+            <h2 className="text-[1.75rem] sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
               TIRE SUAS{" "}
               <span className="text-gradient-premium">DÚVIDAS</span>{" "}
               AGORA.
